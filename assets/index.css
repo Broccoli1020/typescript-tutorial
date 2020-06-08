@@ -13,9 +13,9 @@
   --width-aside: 288px;
 }
 
-html.dark {
+html.is_dark {
   --color-text: #aaa;
-  --color-text-aside: #666;
+  --color-text-aside: #777;
   --color-muted: #777;
   --color-link: hsl(210, 60%, 60%);
   --color-background: #222;
@@ -24,6 +24,15 @@ html.dark {
   --color-background-aside-hover: #111;
   --color-border: #333;
   --color-header-shadow: rgba(0, 0, 0, 0.8);
+
+}
+
+html.is_dark img {
+  opacity: .8;
+  transition: opacity .3s ease-in-out;
+}
+html.is_dark  img:hover {
+  opacity: 1;
 }
 
 /* #region reset */
@@ -187,7 +196,7 @@ article {
   max-width: 50rem;
   margin: 0 auto;
   padding: 0 4rem;
-  min-height: calc(100vh - var(--height-header));
+  min-height: calc(100vh - var(--height-header) - 2rem);
 }
 article.loading {
   display: flex;
